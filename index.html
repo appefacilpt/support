@@ -9,7 +9,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 40px;
-            line-height: 1.2; /* Уменьшенный интервал между строками */
+            line-height: 1.2;
             background-color: #F7D1DD;
             color: #333;
             text-align: center;
@@ -19,45 +19,48 @@
             justify-content: center;
             height: 100vh;
         }
+
         h1, h2 {
             color: #333;
-            margin-bottom: 5px; /* Еще меньший отступ после заголовков */
-        }
-        .logo {
-            position: absolute;
-            top: 180px; /* Смещение логотипа немного вверх */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 140px;
-            height: auto;
-            border-radius: 15px; /* Закругленные углы */
-        }
-        .content {
-            margin-top: 30px; /* Уменьшенный отступ между блоками */
+            margin-bottom: 5px;
         }
 
-        /* Медиа-запрос для мобильных устройств */
+        .app-title {
+            position: absolute;
+            top: 180px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .content {
+            margin-top: 30px;
+        }
+
         @media (max-width: 768px) {
-            .logo {
-                position: static; /* Убираем абсолютное позиционирование */
+            .app-title {
+                position: static;
                 transform: none;
-                width: 120px; /* Немного уменьшаем размер логотипа */
-                margin-bottom: 20px; /* Добавляем отступ под логотипом */
+                margin-bottom: 20px;
+                font-size: 28px;
             }
             body {
-                justify-content: flex-start; /* Смещаем содержимое вверх */
+                justify-content: flex-start;
                 height: auto;
             }
         }
     </style>
 </head>
 <body>
-    <img src="assets/images/logo.png" alt="Logo" class="logo">
+    <h1 class="app-title">éFácil Apps</h1>
+
     <div class="content">
         <h1>Support</h1>
         <p>If you need assistance, please contact us at <a href="mailto:app.efacil.pt@gmail.com">app.efacil.pt@gmail.com</a>.</p>
     </div>
-     <div class="content" style="margin-top: 20px;"> <!-- Уменьшенный отступ между заголовками -->
+
+    <div class="content" style="margin-top: 20px;">
         <h1>Privacy Policy</h1>
         <p>Your privacy is important to us. Read our full policy <a href="https://appefacilpt.github.io/privacy-policy/">here</a>.</p>
     </div>
